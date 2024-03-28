@@ -26,7 +26,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout>Home</Layout>,
+    element: (
+      <Layout>
+        <p>hello world! </p>
+      </Layout>
+    ),
   },
   {
     path: "/count",
