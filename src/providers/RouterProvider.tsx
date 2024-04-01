@@ -1,4 +1,4 @@
-import { Count, TodoList, TodoDetail } from "../components";
+import { Count, TodoList, TodoDetail, Home } from "../components";
 
 import {
   createBrowserRouter,
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <Layout>
-        <p>hello world! </p>
+        <Home />
       </Layout>
     ),
   },
