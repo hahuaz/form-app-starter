@@ -10,3 +10,4 @@
 - [zustand](https://zustand.surge.sh/): Client state management
 - [tankstack-query](https://tanstack.com/query/v3/): Server state management
 - [redux-toolkit](https://redux-toolkit.js.org/): Both client and server state management
+- [use-immer](https://github.com/immerjs/use-immer): React context with immer
