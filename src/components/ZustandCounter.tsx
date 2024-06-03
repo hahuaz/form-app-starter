@@ -1,6 +1,6 @@
-import { useCountStore } from "../store/count";
+import { useCountStore } from "../store/zustand/count";
 
-export function Count() {
+export function ZustandCounter() {
   // using whole state would trigger a rerender on every state change. this is not recommended for performance reasons
   const wholeState = useCountStore((state) => state);
   console.log("wholeState", wholeState);

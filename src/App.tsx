@@ -1,12 +1,18 @@
 import "./App.css";
 
-import { RouterProvider, TanstackQueryProvider } from "./providers";
+import {
+  ReduxProvider,
+  RouterProvider,
+  TanstackQueryProvider,
+} from "./providers";
 
 function App() {
   return (
     <>
       <TanstackQueryProvider>
-        <RouterProvider />
+        <ReduxProvider>
+          <RouterProvider />
+        </ReduxProvider>
       </TanstackQueryProvider>
     </>
   );

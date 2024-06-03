@@ -1,4 +1,11 @@
-import { Count, TodoList, TodoDetail, Home } from "../components";
+import {
+  ZustandCounter,
+  ReduxCounter,
+  TodoList,
+  TodoDetail,
+  Home,
+  Quotes,
+} from "../components";
 
 import {
   createBrowserRouter,
@@ -10,8 +17,10 @@ const Links = () => (
   <>
     <div className="links">
       <Link to="/">Home</Link>
-      <Link to="/count">Count</Link>
+      <Link to="/zustand-counter">Zustand Counter</Link>
+      <Link to="/redux-counter">Redux Counter</Link>
       <Link to="/todos">TodoList</Link>
+      <Link to="/quotes">Quotes</Link>
     </div>
   </>
 );
@@ -33,10 +42,18 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/count",
+    path: "/zustand-counter",
     element: (
       <Layout>
-        <Count />
+        <ZustandCounter />
+      </Layout>
+    ),
+  },
+  {
+    path: "/redux-counter",
+    element: (
+      <Layout>
+        <ReduxCounter />
       </Layout>
     ),
   },
@@ -53,6 +70,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <TodoDetail />
+      </Layout>
+    ),
+  },
+  {
+    path: "/quotes",
+    element: (
+      <Layout>
+        <Quotes />
       </Layout>
     ),
   },
