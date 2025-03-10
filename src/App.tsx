@@ -1,27 +1,20 @@
-import "./App.css";
+import { Routes } from "@/providers";
 
-import {
-  CommonContextProvider,
-  ReduxProvider,
-  RouterProvider,
-  TanstackQueryProvider,
-} from "./providers";
-
-import { message } from "antd";
+// seperate providers to their own directories to distinguish which library requires what.
+import { ContextProvider } from "@/components/vanilla-counter";
+import { TanstackQueryProvider } from "@/components/todos-tsquery";
+import { ReduxProvider } from "@/components/counter-and-todos-redux";
 
 function App() {
-  const [messageApi, contextHolder] = message.useMessage();
-
   return (
     <>
-      {contextHolder}
-      <CommonContextProvider messageApi={messageApi}>
+      <ContextProvider>
         <TanstackQueryProvider>
           <ReduxProvider>
-            <RouterProvider />
+            <Routes />
           </ReduxProvider>
         </TanstackQueryProvider>
-      </CommonContextProvider>
+      </ContextProvider>
     </>
   );
 }

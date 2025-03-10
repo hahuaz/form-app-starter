@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Todo } from "../types";
+import type { Todo } from "@/types";
 
 const BASE_URL = "http://localhost:3001";
 
@@ -9,7 +9,7 @@ export const getTodoIds = async () => {
   return (await axiosInstance.get<Todo[]>("todos")).data.map((item) => item.id);
 };
 
-export const getTodo = async (id: number) => {
+export const getTodo = async (id: string) => {
   return (await axiosInstance.get<Todo>(`todos/${id}`)).data;
 };
 
@@ -21,6 +21,6 @@ export const updateTodo = async (data: Todo) => {
   await axiosInstance.put(`todos/${data.id}`, data);
 };
 
-export const deleteTodo = async (id: number | undefined) => {
+export const deleteTodo = async (id: string | undefined) => {
   await axiosInstance.delete(`todos/${id}`);
 };
