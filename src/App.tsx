@@ -1,4 +1,4 @@
-import { Routes } from "@/providers";
+import { AppRouteProvider } from "@/providers";
 
 // seperate providers to their own directories to distinguish which library requires what.
 import { ContextProvider } from "@/components/vanilla-counter";
@@ -11,7 +11,7 @@ function App() {
       <ContextProvider>
         <TanstackQueryProvider>
           <ReduxProvider>
-            <Routes />
+            <AppRouteProvider />
           </ReduxProvider>
         </TanstackQueryProvider>
       </ContextProvider>
